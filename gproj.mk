@@ -183,6 +183,12 @@ PRODUCT_PACKAGES += \
 	libgps.utils \
 	gps.msm8960
 
+# This device tree has loki source... so SOME gproj devices will need this
+# Its existence does not affect ones that don't also build the rest of loki
+# .... I think
+PRODUCT_PACKAGES += \
+	loki_unpatch
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
